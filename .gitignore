@@ -1,0 +1,9 @@
+# service folders
+node_modules
+
+# service files
+yarn-error.log
+.DS_Store
+
+# folders
+lib
