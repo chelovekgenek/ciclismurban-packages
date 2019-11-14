@@ -31,7 +31,7 @@ export class UserModel {
 
   @Expose({ groups: [UserExposeGroup.READ] })
   @Type(() => ProfileModel)
-  profile: ProfileModel
+  profile: Partial<ProfileModel>
 
   @Expose({ groups: [UserExposeGroup.READ] })
   createdAt: Date
