@@ -4,23 +4,23 @@ import { IsOptional, IsUrl, IsString } from "class-validator"
 import { UserExposeGroup } from "../interfaces"
 
 export class ProfileModel {
-  @Expose({ groups: [UserExposeGroup.READ, UserExposeGroup.WRITE, UserExposeGroup.UPDATE] })
+  @Expose({ groups: [UserExposeGroup.READ, UserExposeGroup.UPDATE] })
   @IsOptional({ groups: [UserExposeGroup.UPDATE] })
   @IsUrl({}, { always: true })
-  avatar: string
+  avatar?: string
 
-  @Expose({ groups: [UserExposeGroup.READ, UserExposeGroup.WRITE, UserExposeGroup.UPDATE] })
+  @Expose({ groups: [UserExposeGroup.READ, UserExposeGroup.UPDATE] })
   @IsOptional({ groups: [UserExposeGroup.UPDATE] })
   @IsString({ always: true })
-  description: string
+  description?: string
 
-  @Expose({ groups: [UserExposeGroup.READ, UserExposeGroup.WRITE, UserExposeGroup.UPDATE] })
+  @Expose({ groups: [UserExposeGroup.READ, UserExposeGroup.UPDATE] })
   @IsOptional({ groups: [UserExposeGroup.UPDATE] })
   @IsString({ always: true })
-  facebook: string
+  facebook?: string
 
-  @Expose({ groups: [UserExposeGroup.READ, UserExposeGroup.WRITE, UserExposeGroup.UPDATE] })
+  @Expose({ groups: [UserExposeGroup.READ, UserExposeGroup.UPDATE] })
   @IsOptional({ groups: [UserExposeGroup.UPDATE] })
   @IsString({ always: true })
-  telegram: string
+  telegram?: string
 }

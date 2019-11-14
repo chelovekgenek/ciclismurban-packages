@@ -29,7 +29,7 @@ export class UserModel {
   @Type(() => SocialModel)
   social?: SocialModel
 
-  @Exclude()
+  @Expose({ groups: [UserExposeGroup.READ] })
   @Type(() => ProfileModel)
   profile: ProfileModel
 
