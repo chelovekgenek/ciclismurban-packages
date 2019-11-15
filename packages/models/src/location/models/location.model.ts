@@ -8,6 +8,9 @@ export class LocationModel {
   @Expose({ groups: [LocationExposeGroup.READ] })
   uuid: string
 
+  @Expose({ groups: [LocationExposeGroup.READ] })
+  userId: string
+
   @Expose({ groups: [LocationExposeGroup.READ, LocationExposeGroup.WRITE, LocationExposeGroup.UPDATE] })
   @IsString({ always: true })
   @Length(3, undefined, { always: true })
