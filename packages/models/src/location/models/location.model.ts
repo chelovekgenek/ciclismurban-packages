@@ -1,7 +1,7 @@
 import { Expose, Type } from "class-transformer"
 import { ValidateNested, IsString, IsUrl, Length, IsOptional } from "class-validator"
 
-import { PointModel } from "./point.model"
+import { PointModel } from "../../shared/point"
 import { LocationExposeGroup } from "../interfaces"
 
 export class LocationModel {

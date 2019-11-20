@@ -1,4 +1,4 @@
-import { IsEmail, IsString, Length, IsArray, IsIn } from "class-validator"
+import { IsEmail, IsString, Length, IsArray, IsIn, ValidateNested } from "class-validator"
 import { Expose, Exclude, Type } from "class-transformer"
 
 import { UserExposeGroup } from "../interfaces"
@@ -6,6 +6,7 @@ import { UserExposeGroup } from "../interfaces"
 import { SocialModel } from "./social.model"
 import { ProfileModel } from "./profile.model"
 import { MergedPermissions } from "./merged-permissions"
+import { PointModel } from "../../shared"
 
 export class UserModel {
   @Expose({ groups: [UserExposeGroup.READ] })
@@ -32,6 +33,10 @@ export class UserModel {
   @Expose({ groups: [UserExposeGroup.READ] })
   @Type(() => ProfileModel)
   profile: Partial<ProfileModel>
+
+  @Expose({ groups: [UserExposeGroup.READ] })
+  @Type(() => PointModel)
+  position: PointModel
 
   @Expose({ groups: [UserExposeGroup.READ] })
   createdAt: Date

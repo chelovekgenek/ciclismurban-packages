@@ -6,7 +6,7 @@ import {
   transformAndValidateSync,
 } from "class-transformer-validator"
 
-import { IFlatValidationError } from "./validator.interface"
+import { IFlatValidationError } from "./validation.interface"
 
 export function getFlatValidationErrors(errors: ValidationError[]): IFlatValidationError[] {
   const flatErrors: IFlatValidationError[] = []

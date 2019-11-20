@@ -1,6 +1,6 @@
 {
   "name": "@ciclismurban/models",
-  "version": "1.4.0",
+  "version": "1.5.2",
   "main": "lib/index.js",
   "license": "MIT",
   "private": false,
@@ -20,5 +20,6 @@
     "class-transformer": "^0.2.3",
     "class-transformer-validator": "^0.8.0",
     "class-validator": "^0.11.0"
-  }
+  },
+  "gitHead": "ed247e7c5ea4287ef9d5496dd5abea3c017b4f2f"
 }
