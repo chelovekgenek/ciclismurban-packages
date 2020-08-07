@@ -17,7 +17,7 @@
     "access": "public"
   },
   "dependencies": {
-    "class-transformer": "^0.2.3",
+    "class-transformer": "^0.3.1",
     "class-transformer-validator": "^0.8.0",
     "class-validator": "^0.11.0"
   },
